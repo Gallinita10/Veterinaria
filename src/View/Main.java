@@ -8,6 +8,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JMenu;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Main extends JFrame {
 
@@ -33,19 +36,29 @@ public class Main extends JFrame {
 	 * Create the frame.
 	 */
 	public Main() {
+		setTitle("Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 669, 400);
+		setBounds(100, 100, 690, 417);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
 		JMenuItem mntmClientes = new JMenuItem("Clientes");
+		mntmClientes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Cliente cliente = new Cliente();
+				cliente.setVisible(true);
+			}
+		});
+		mntmClientes.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(mntmClientes);
 		
 		JMenuItem mntmVeterinarios = new JMenuItem("Veterinarios");
+		mntmVeterinarios.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(mntmVeterinarios);
 		
 		JMenu mnVentas = new JMenu("Ventas");
+		mnVentas.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(mnVentas);
 		
 		JMenu mnProductos = new JMenu("Productos");
@@ -73,6 +86,7 @@ public class Main extends JFrame {
 		mnVentas.add(mntmPresupuestos);
 		
 		JMenu mnTurnos = new JMenu("Turnos");
+		mnTurnos.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(mnTurnos);
 		
 		JMenuItem mntmCitas = new JMenuItem("Citas");
@@ -85,6 +99,7 @@ public class Main extends JFrame {
 		mnTurnos.add(mntmIntervenciones);
 		
 		JMenu mnArchivos = new JMenu("Archivos");
+		mnArchivos.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(mnArchivos);
 		
 		JMenuItem mntmABMCliente = new JMenuItem("ABM Cliente");
@@ -148,6 +163,7 @@ public class Main extends JFrame {
 		mnArchivos.add(mntmABMIntervencion);
 		
 		JMenuItem mntmHistorialesMedicos = new JMenuItem("Historiales médicos");
+		mntmHistorialesMedicos.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(mntmHistorialesMedicos);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
