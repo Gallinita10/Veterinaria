@@ -11,6 +11,8 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.ButtonGroup;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Mascota extends JFrame {
 
@@ -106,6 +108,11 @@ public class Mascota extends JFrame {
 		contentPane.add(btnEliminar);
 		
 		JButton btnVolver = new JButton("Volver");
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 		btnVolver.setBounds(292, 312, 89, 23);
 		contentPane.add(btnVolver);
 	}
