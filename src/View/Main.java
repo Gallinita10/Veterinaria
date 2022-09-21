@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JMenu;
 
 public class Main extends JFrame {
 
@@ -31,7 +34,121 @@ public class Main extends JFrame {
 	 */
 	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 669, 400);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenuItem mntmClientes = new JMenuItem("Clientes");
+		menuBar.add(mntmClientes);
+		
+		JMenuItem mntmVeterinarios = new JMenuItem("Veterinarios");
+		menuBar.add(mntmVeterinarios);
+		
+		JMenu mnVentas = new JMenu("Ventas");
+		menuBar.add(mnVentas);
+		
+		JMenu mnProductos = new JMenu("Productos");
+		mnVentas.add(mnProductos);
+		
+		JMenuItem mntmAlimento = new JMenuItem("Alimento");
+		mnProductos.add(mntmAlimento);
+		
+		JMenuItem mntmAccesorios = new JMenuItem("Accesorios");
+		mnProductos.add(mntmAccesorios);
+		
+		JMenuItem mntmMedicos = new JMenuItem("Medicos");
+		mnProductos.add(mntmMedicos);
+		
+		JMenuItem mntmProveedores = new JMenuItem("Proveedores");
+		mnVentas.add(mntmProveedores);
+		
+		JMenuItem mntmStock = new JMenuItem("Stock");
+		mnVentas.add(mntmStock);
+		
+		JMenuItem mntmFacturacion = new JMenuItem("Facturacion");
+		mnVentas.add(mntmFacturacion);
+		
+		JMenuItem mntmPresupuestos = new JMenuItem("Presupuestos");
+		mnVentas.add(mntmPresupuestos);
+		
+		JMenu mnTurnos = new JMenu("Turnos");
+		menuBar.add(mnTurnos);
+		
+		JMenuItem mntmCitas = new JMenuItem("Citas");
+		mnTurnos.add(mntmCitas);
+		
+		JMenuItem mntmVisitas = new JMenuItem("Visitas");
+		mnTurnos.add(mntmVisitas);
+		
+		JMenuItem mntmIntervenciones = new JMenuItem("Intervenciones");
+		mnTurnos.add(mntmIntervenciones);
+		
+		JMenu mnArchivos = new JMenu("Archivos");
+		menuBar.add(mnArchivos);
+		
+		JMenuItem mntmABMCliente = new JMenuItem("ABM Cliente");
+		mnArchivos.add(mntmABMCliente);
+		
+		JMenuItem mntmABMMascota = new JMenuItem("ABM Mascota");
+		mnArchivos.add(mntmABMMascota);
+		
+		JMenu mnABMProducto = new JMenu("ABM Producto");
+		mnArchivos.add(mnABMProducto);
+		
+		JMenuItem mntmABMAlimenticio = new JMenuItem("Alimenticio");
+		mnABMProducto.add(mntmABMAlimenticio);
+		
+		JMenuItem mntmAccesorio = new JMenuItem("Accesorio");
+		mnABMProducto.add(mntmAccesorio);
+		
+		JMenuItem mntmMedico = new JMenuItem("Medico");
+		mnABMProducto.add(mntmMedico);
+		
+		JMenuItem mntmABMProveedor = new JMenuItem("ABM Proveedor");
+		mnArchivos.add(mntmABMProveedor);
+		
+		JMenuItem mntmABMTipoProveedor = new JMenuItem("ABM Tipo Proveedor");
+		mnArchivos.add(mntmABMTipoProveedor);
+		
+		JMenuItem mntmABMVeterinario = new JMenuItem("ABM Veterinario");
+		mnArchivos.add(mntmABMVeterinario);
+		
+		JMenuItem mntmABMSucursal = new JMenuItem("ABM Sucursal");
+		mnArchivos.add(mntmABMSucursal);
+		
+		JMenuItem mntmABMQuirofano = new JMenuItem("ABM Quirofano");
+		mnArchivos.add(mntmABMQuirofano);
+		
+		JMenuItem mntmABMArtefacto = new JMenuItem("ABM Artefacto");
+		mnArchivos.add(mntmABMArtefacto);
+		
+		JMenuItem mntmABMCiudad = new JMenuItem("ABM Ciudad");
+		mnArchivos.add(mntmABMCiudad);
+		
+		JMenuItem mntmABMProvincia = new JMenuItem("ABM Provincia");
+		mnArchivos.add(mntmABMProvincia);
+		
+		JMenuItem mntmABMPais = new JMenuItem("ABM País");
+		mnArchivos.add(mntmABMPais);
+		
+		JMenuItem mntmABMGestor = new JMenuItem("ABM Gestor");
+		mnArchivos.add(mntmABMGestor);
+		
+		JMenuItem mntmABMUsuario = new JMenuItem("ABM Usuario");
+		mnArchivos.add(mntmABMUsuario);
+		
+		JMenuItem mntmABMCita = new JMenuItem("ABM Cita");
+		mnArchivos.add(mntmABMCita);
+		
+		JMenuItem mntmABMVisita = new JMenuItem("ABM Visita");
+		mnArchivos.add(mntmABMVisita);
+		
+		JMenuItem mntmABMIntervencion = new JMenuItem("ABM Intervencion");
+		mnArchivos.add(mntmABMIntervencion);
+		
+		JMenuItem mntmHistorialesMedicos = new JMenuItem("Historiales médicos");
+		menuBar.add(mntmHistorialesMedicos);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 

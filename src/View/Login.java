@@ -45,7 +45,7 @@ public class Login extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Ingresar usuario y contraseña");
-		lblNewLabel.setBounds(159, 11, 200, 14);
+		lblNewLabel.setBounds(149, 11, 200, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblUsuario = new JLabel("Usuario");
