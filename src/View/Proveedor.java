@@ -7,19 +7,15 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.JComboBox;
 import javax.swing.JButton;
-import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Cliente extends JFrame {
+public class Proveedor extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtNombre;
 	private JTextField txtDireccion;
-	private JTextField txtDni;
-	private JTextField txtFechaNacimiento;
 	private JTextField txtTelefono;
 
 	/**
@@ -29,7 +25,7 @@ public class Cliente extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Cliente frame = new Cliente();
+					Proveedor frame = new Proveedor();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,84 +37,66 @@ public class Cliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Cliente() {
-		setTitle("Cliente");
+	public Proveedor() {
+		setTitle("Proveedor");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 449);
+		setBounds(100, 100, 450, 372);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblCliente = new JLabel("Cliente");
-		lblCliente.setBounds(185, 11, 46, 14);
-		contentPane.add(lblCliente);
+		JLabel lblTitulo = new JLabel("Proveedores");
+		lblTitulo.setBounds(185, 11, 84, 14);
+		contentPane.add(lblTitulo);
 		
 		JLabel lblNombre = new JLabel("Nombre");
-		lblNombre.setBounds(37, 60, 153, 14);
+		lblNombre.setBounds(62, 55, 46, 14);
 		contentPane.add(lblNombre);
 		
 		JLabel lblDireccion = new JLabel("Direccion");
-		lblDireccion.setBounds(37, 100, 153, 14);
+		lblDireccion.setBounds(62, 107, 66, 14);
 		contentPane.add(lblDireccion);
 		
+		JLabel lblTelefono = new JLabel("Telefono");
+		lblTelefono.setBounds(62, 157, 66, 14);
+		contentPane.add(lblTelefono);
+		
+		JLabel lblTipo = new JLabel("Tipo");
+		lblTipo.setBounds(62, 208, 46, 14);
+		contentPane.add(lblTipo);
+		
 		txtNombre = new JTextField();
-		txtNombre.setBounds(224, 54, 171, 20);
+		txtNombre.setBounds(154, 52, 184, 20);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 		
 		txtDireccion = new JTextField();
-		txtDireccion.setBounds(224, 94, 171, 20);
+		txtDireccion.setBounds(154, 104, 184, 20);
 		contentPane.add(txtDireccion);
 		txtDireccion.setColumns(10);
 		
-		JLabel lblDni = new JLabel("DNI");
-		lblDni.setBounds(37, 144, 153, 14);
-		contentPane.add(lblDni);
-		
-		txtDni = new JTextField();
-		txtDni.setBounds(224, 138, 171, 20);
-		contentPane.add(txtDni);
-		txtDni.setColumns(10);
-		
-		JLabel lblFechaNacimiento = new JLabel("Fecha de nacimiento");
-		lblFechaNacimiento.setBounds(37, 192, 153, 14);
-		contentPane.add(lblFechaNacimiento);
-		
-		txtFechaNacimiento = new JTextField();
-		txtFechaNacimiento.setBounds(224, 186, 171, 20);
-		contentPane.add(txtFechaNacimiento);
-		txtFechaNacimiento.setColumns(10);
-		
-		JLabel lblGenero = new JLabel("Genero");
-		lblGenero.setBounds(37, 241, 153, 14);
-		contentPane.add(lblGenero);
-		
-		JComboBox cbGenero = new JComboBox();
-		cbGenero.setBounds(224, 234, 171, 22);
-		cbGenero.setModel(new DefaultComboBoxModel(new String[] {"Hombre", "Mujer", "Otros"}));
-		contentPane.add(cbGenero);
-		
-		JLabel lblTelefono = new JLabel("Telefono");
-		lblTelefono.setBounds(37, 295, 153, 14);
-		contentPane.add(lblTelefono);
-		
 		txtTelefono = new JTextField();
-		txtTelefono.setBounds(224, 289, 171, 20);
+		txtTelefono.setBounds(154, 154, 184, 20);
 		contentPane.add(txtTelefono);
 		txtTelefono.setColumns(10);
 		
+		JTextField txtTipo = new JTextField();
+		txtTipo.setBounds(154, 205, 184, 20);
+		contentPane.add(txtTipo);
+		txtTipo.setColumns(10);
+		
 		JButton btnAgregar = new JButton("Agregar");
-		btnAgregar.setBounds(37, 328, 89, 23);
+		btnAgregar.setBounds(40, 251, 89, 23);
 		contentPane.add(btnAgregar);
 		
 		JButton btnModificar = new JButton("Modificar");
-		btnModificar.setBounds(154, 328, 89, 23);
+		btnModificar.setBounds(157, 251, 89, 23);
 		contentPane.add(btnModificar);
 		
 		JButton btnEliminar = new JButton("Eliminar");
-		btnEliminar.setBounds(275, 328, 89, 23);
+		btnEliminar.setBounds(278, 251, 89, 23);
 		contentPane.add(btnEliminar);
 		
 		JButton btnVolver = new JButton("Volver");
@@ -127,7 +105,8 @@ public class Cliente extends JFrame {
 				dispose();
 			}
 		});
-		btnVolver.setBounds(306, 376, 89, 23);
+		btnVolver.setBounds(309, 299, 89, 23);
 		contentPane.add(btnVolver);
 	}
+
 }

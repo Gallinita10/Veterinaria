@@ -3,6 +3,7 @@ package Model;
 public class User {
 
 	protected int id_User;
+	protected String username;
     protected int permission_Level;
     protected String dni;
     protected String name;
@@ -18,6 +19,14 @@ public class User {
 		this.id_User = id_User;
 	}
 	
+	
+	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	public int getPermission_Level() {
 		return permission_Level;
 	}
@@ -64,10 +73,12 @@ public class User {
 	public User() {
 		super();
 	}
-	public User(int id_User, int permission_Level, String dni, String name, String address, String phone_Number,
-			String birthdate, String gender) {
+	
+	public User(int id_User, String username, int permission_Level, String dni, String name, String address,
+			String phone_Number, String birthdate, String gender) {
 		super();
 		this.id_User = id_User;
+		this.username = username;
 		this.permission_Level = permission_Level;
 		this.dni = dni;
 		this.name = name;
@@ -76,9 +87,11 @@ public class User {
 		this.birthdate = birthdate;
 		this.gender = gender;
 	}
-	public User(int permission_Level, String dni, String name, String address, String phone_Number, String birthdate,
-			String gender) {
+	
+	public User(String username, int permission_Level, String dni, String name, String address, String phone_Number,
+			String birthdate, String gender) {
 		super();
+		this.username = username;
 		this.permission_Level = permission_Level;
 		this.dni = dni;
 		this.name = name;

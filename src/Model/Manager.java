@@ -25,18 +25,23 @@ public class Manager extends User {
 	 public Manager() {
 		super();
 	}
-	
-	
-	 public Manager(int id_Manager, String working_Day) {
-		super();
+
+	public Manager(int id_User, String username, int permission_Level, String dni, String name, String address,
+			String phone_Number, String birthdate, String gender, int id_Manager, String working_Day) {
+		super(id_User, username, permission_Level, dni, name, address, phone_Number, birthdate, gender);
+		this.id_Manager = id_Manager;
+		this.working_Day = working_Day;
+	}
+
+	public Manager(String username, int permission_Level, String dni, String name, String address, String phone_Number,
+			String birthdate, String gender, int id_Manager, String working_Day) {
+		super(username, permission_Level, dni, name, address, phone_Number, birthdate, gender);
 		this.id_Manager = id_Manager;
 		this.working_Day = working_Day;
 	}
 	
-	public Manager(String working_Day) {
-		super();
-		this.working_Day = working_Day;
-	}
+	
+	 
 	
 	 
 	

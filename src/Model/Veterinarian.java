@@ -22,19 +22,23 @@ public class Veterinarian extends User {
 		super();
 	}
 	
-	public Veterinarian(int id_User, int permission_Level, String dni, String name, String address, String phone_Number,
-			String birthdate, String gender, int id_Veterinarian, String medical_License) {
-		super(id_User, permission_Level, dni, name, address, phone_Number, birthdate, gender);
+	public Veterinarian(int id_User, String username, int permission_Level, String dni, String name, String address,
+			String phone_Number, String birthdate, String gender, int id_Veterinarian, String medical_License) {
+		super(id_User, username, permission_Level, dni, name, address, phone_Number, birthdate, gender);
 		this.id_Veterinarian = id_Veterinarian;
 		this.medical_License = medical_License;
 	}
 	
-	public Veterinarian(int permission_Level, String dni, String name, String address, String phone_Number,
-			String birthdate, String gender, int id_Veterinarian, String medical_License) {
-		super(permission_Level, dni, name, address, phone_Number, birthdate, gender);
+	public Veterinarian(String username, int permission_Level, String dni, String name, String address,
+			String phone_Number, String birthdate, String gender, int id_Veterinarian, String medical_License) {
+		super(username, permission_Level, dni, name, address, phone_Number, birthdate, gender);
 		this.id_Veterinarian = id_Veterinarian;
 		this.medical_License = medical_License;
 	}
+	
+	
+	
+	
 	
 	
 	

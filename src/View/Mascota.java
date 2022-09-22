@@ -42,6 +42,7 @@ public class Mascota extends JFrame {
 	 * Create the frame.
 	 */
 	public Mascota() {
+		setTitle("Mascota");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 442, 391);
 		contentPane = new JPanel();
@@ -81,7 +82,7 @@ public class Mascota extends JFrame {
 		contentPane.add(txtEdad);
 		txtEdad.setColumns(10);
 		
-		JLabel lblGenero = new JLabel("Genero");
+		JLabel lblGenero = new JLabel("Género");
 		lblGenero.setBounds(48, 210, 46, 14);
 		contentPane.add(lblGenero);
 		
